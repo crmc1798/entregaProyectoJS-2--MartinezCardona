@@ -1,0 +1,23 @@
+En este documento de texto plano se va a documentar las optimizaciones de codigo que se vayan implementando
+
+Como mejora de archivo login.js
+
+Se reemplaza la condicion if por operador temerario
+
+                if (username === "Admin" && password === "Contra123!") {
+                        location.href = '../pages/altaAutos.html';
+                    } else {
+                        loginErrorMsg.style.opacity = 1;
+                    }
+
+                a
+
+                username === Usuario && password === Contra ? location.href = '../pages/altaAutos.html' : loginErrorMsg.style.opacity = 1;
+
+ademas se agrega de forma separada en variables el usuario y contrasella para en caso de ser necesario cambiarlos de forma facil
+
+
+
+Como libreria se agrega sweet alert para mensaje de error en la pagina de login al digitar valores incorrectos
+
+    

@@ -30,7 +30,6 @@ function agregarAuto(e) {
 
     if (arregloAutosJSON == null) {
         localStorage.setItem("arregloAutos", JSON.stringify([arregloAutos]));
-        console.log("vacio");
         mostrarAutos([arregloAutos]);
     } else {
         arregloAutosJSON.push(arregloAutos);
@@ -44,6 +43,7 @@ function agregarAuto(e) {
 function mostrarAutos(arregloAutosJSON) {
     let listadoDeAutos = document.getElementById("listadoDeAutos");
     listadoDeAutos.innerHTML = "";
+    
     arregloAutosJSON.forEach(auto => {
         let li = document.createElement("li");
         li.innerHTML = `
