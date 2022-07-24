@@ -5,7 +5,9 @@ const loginErrorMsg = document.getElementById("login-error-msg");
 let Usuario="Admin";
 let Contra="Contra123!"
 
-
+fetch('../json/lista.json')
+.then(res => res.json())
+.then(res => console.log(data.titulo));
 //se asigna evento a boton 
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();

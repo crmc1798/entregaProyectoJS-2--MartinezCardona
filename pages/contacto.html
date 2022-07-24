@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,23 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("zKVPiTRSbOSOG-orr");
+        })();
+    </script>
 </head>
+
 <body>
     <header>
         <div class="cHeader">
-            <a href="../index.html"><h1>Logo</h1></a>
+            <a href="../index.html">
+                <h1>Logo</h1>
+            </a>
             <nav>
                 <ul>
                     <li><a href="../index.html" class="link">Inicio</a></li>
@@ -25,9 +36,67 @@
         </div>
     </header>
 
+
+    <!-- Section -->
     <section>
-        <h1>Pendiente</h1>
+        <div class="titulo">
+            <h1>Contactanos</h1>
+        </div>
+
+
+        <form id="myForm">
+            <div></div>
+            <label for="fname">Nombre completo:</label><br>
+            <input type="text" id="fullname" name="fullname" placeholder=" Tu nombre completo aquí"><br>
+            <label for="lname">Email:</label><br>
+            <input type="email" id="email_id" name="email_id" placeholder=" Tu correo aquí"><br>
+            <label for="lname">Comentarios:</label><br>
+            <textarea id="message" name="message" rows="3" placeholder=" Tus comentarios aquí"></textarea><br>
+            <input type="submit" value="Enviar">
+          </form>
+
+        <!-- <div>
+            <div>
+                <div>
+                    <label for="fullname" >Nombre</label>
+                </div>
+                <div>
+                    <input type="text" id="fullname" placeholder=" Tu nombre aquí">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="email_id" >Correo</label>
+                </div>
+                <div>
+                    <input type="email" id="email_id" placeholder=" Tu correo aquí">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="message" >Comentarios</label>
+                </div>
+                <div>
+                    <textarea id="message" rows="3"
+                        placeholder=" Tus comentarios aquí"></textarea>
+                </div>
+            </div>
+
+            <div>
+                <button onclick="SendMail()">Enviar</button>
+            </div>
+        </div> -->
+
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d430734.2719486757!2d-117.22799648534046!3d32.49644891217552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9390226587bd3%3A0x14724bafa4e62456!2sTijuana%2C%20B.C.!5e0!3m2!1ses-419!2smx!4v1648775215771!5m2!1ses-419!2smx"
+                width="100%" height="400px" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </section>
+
 
     <footer>
 
@@ -42,7 +111,9 @@
             </nav>
         </div>
         <div class="infoFooter">
-            <a href="../index.html"><h2>Logo</h2></a> 
+            <a href="../index.html">
+                <h2>Logo</h2>
+            </a>
             <ul class=" ulFooter">
                 <li>Direccion:</li>
                 <li>Numero</li>
@@ -53,6 +124,11 @@
             <a href="login.html" class="linkLogin"> Sitio administrador</a>
         </div>
 
-    </footer>  
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/sendEmail.js "></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>
